@@ -13,14 +13,6 @@ CourseWindow::CourseWindow(QWidget *parent)
                       new Lievre()});
     players.push_back(Player{new QLabel(this),
                       new Lievre()});
-    players.push_back(Player{new QLabel(this),
-                      new Lievre()});
-    players.push_back(Player{new QLabel(this),
-                      new Tortue()});
-    players.push_back(Player{new QLabel(this),
-                      new Tortue()});
-    players.push_back(Player{new QLabel(this),
-                      new Tortue()});
 
     for(unsigned int i = 0; i < players.size(); i++)
     {
