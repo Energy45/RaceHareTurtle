@@ -22,7 +22,7 @@ private:
 	string m_name;
 
 protected:
-    unsigned int m_pos;
+    int m_pos;
 
 	void setName(string _name);
 };
