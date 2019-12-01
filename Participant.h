@@ -16,13 +16,13 @@ public:
 	virtual void affichage() const;
 
 	string getName() const;
-	int getPosition() const;
+    unsigned int getPosition() const;
 
 private:
 	string m_name;
 
 protected:
-	int m_pos;
+    unsigned int m_pos;
 
 	void setName(string _name);
 };

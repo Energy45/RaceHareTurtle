@@ -5,7 +5,7 @@ CourseWindow::CourseWindow(QWidget *parent)
 {
     setGeometry(0, 0, 800, 800);
 
-    srand(time(nullptr));
+    srand(static_cast<unsigned int>(time(nullptr)));
 
     players.push_back(Player{new QLabel(this),
                       new Tortue()});
@@ -24,7 +24,7 @@ CourseWindow::CourseWindow(QWidget *parent)
         {
             players.at(i).m_label->setPixmap(QPixmap("F:\\hare.jpg"));
         }
-        players.at(i).m_label->setGeometry(0, i*RESOLUTION, RESOLUTION, RESOLUTION);
+        players.at(i).m_label->setGeometry(0, static_cast<int>(i*RESOLUTION), static_cast<int>(RESOLUTION), static_cast<int>(RESOLUTION));
     }
 
     m_timer = new QTimer(this);
@@ -54,8 +54,8 @@ void CourseWindow::updateCourse()
     for(unsigned int i = 0; i < players.size(); i++)
     {
         players.at(i).m_participant->bouger();
-        int position = players.at(i).m_participant->getPosition();
-        players.at(i).m_label->setGeometry(position*10, i*RESOLUTION, RESOLUTION, RESOLUTION);
+        uint position = players.at(i).m_participant->getPosition();
+        players.at(i).m_label->setGeometry(static_cast<int>(position*10), static_cast<int>(i*RESOLUTION), static_cast<int>(RESOLUTION), static_cast<int>(RESOLUTION));
 
         if(position >= MAX_CASES)
         {

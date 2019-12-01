@@ -26,8 +26,8 @@ private:
     vector<Player> players;
     QTimer* m_timer;
 
-    const int MAX_CASES = 70;
-    const int RESOLUTION = 64;
+    const uint MAX_CASES = 70;
+    const uint RESOLUTION = 64;
 
 private slots:
     void updateCourse();
