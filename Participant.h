@@ -16,7 +16,7 @@ public:
 	virtual void affichage() const;
 
 	string getName() const;
-    unsigned int getPosition() const;
+    int getPosition() const;
 
 private:
 	string m_name;

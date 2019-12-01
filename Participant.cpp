@@ -1,6 +1,6 @@
 #include "Participant.h"
 
-Participant::Participant() : m_pos(1), m_name("")
+Participant::Participant() : m_name(""), m_pos(1)
 {
 }
 
