@@ -20,7 +20,7 @@ class CourseWindow : public QDialog
     Q_OBJECT
 
 public:
-    CourseWindow(int _nbHare, int _nbTurtle, QWidget *parent = nullptr);
+    CourseWindow(int _nbHare, int _nbTurtle, int tickTime, QWidget *parent = nullptr);
     ~CourseWindow();
 
 private:

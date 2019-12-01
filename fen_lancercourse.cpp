@@ -29,7 +29,7 @@ void FEN_LancerCourse::launchRace()
         {
             delete course;
         }
-        course = new CourseWindow(ui->spBx_hares->value(), ui->spBx_turtles->value());
+        course = new CourseWindow(ui->spBx_hares->value(), ui->spBx_turtles->value(), ui->spBx_tickTime->value());
         course->show();
     }
     else

@@ -1,6 +1,6 @@
 #include "coursewindow.h"
 
-CourseWindow::CourseWindow(int _nbHare, int _nbTurtle, QWidget *parent)
+CourseWindow::CourseWindow(int _nbHare, int _nbTurtle, int tickTime, QWidget *parent)
     : QDialog(parent)
 {
     setGeometry(0, 0, 800, 800);
@@ -35,7 +35,7 @@ CourseWindow::CourseWindow(int _nbHare, int _nbTurtle, QWidget *parent)
     m_timer = new QTimer(this);
 
     connect(m_timer, &QTimer::timeout, this, &CourseWindow::updateCourse);
-    m_timer->start(500);
+    m_timer->start(tickTime);
 }
 
 CourseWindow::~CourseWindow()
