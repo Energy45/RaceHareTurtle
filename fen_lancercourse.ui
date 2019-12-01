@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>231</width>
-    <height>239</height>
+    <width>230</width>
+    <height>240</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,7 +59,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QSpinBox" name="spBx_turtles">
+     <widget class="QSpinBox" name="spBx_hares">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
         <horstretch>50</horstretch>
@@ -73,7 +73,7 @@
        </size>
       </property>
       <property name="maximum">
-       <number>87</number>
+       <number>10</number>
       </property>
      </widget>
     </item>
@@ -91,7 +91,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QSpinBox" name="spBx_hares"/>
+     <widget class="QSpinBox" name="spBx_turtles">
+      <property name="maximum">
+       <number>10</number>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
