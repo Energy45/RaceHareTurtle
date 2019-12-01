@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "ui_fen_lancercourse.h"
+#include "coursewindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class FEN_LancerCourse; }
@@ -18,6 +19,7 @@ public:
 
 private:
     Ui::FEN_LancerCourse *ui;
+    CourseWindow* course;
 
 private slots:
     void launchRace();

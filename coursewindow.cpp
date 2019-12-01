@@ -1,18 +1,23 @@
 #include "coursewindow.h"
 
-CourseWindow::CourseWindow(QWidget *parent)
+CourseWindow::CourseWindow(int _nbHare, int _nbTurtle, QWidget *parent)
     : QDialog(parent)
 {
     setGeometry(0, 0, 800, 800);
 
     srand(static_cast<unsigned int>(time(nullptr)));
 
-    players.push_back(Player{new QLabel(this),
-                      new Tortue()});
-    players.push_back(Player{new QLabel(this),
-                      new Lievre()});
-    players.push_back(Player{new QLabel(this),
-                      new Lievre()});
+    for(unsigned int i = 0; i < _nbHare; i++)
+    {
+        players.push_back(Player{new QLabel(this),
+                            new Lievre()});
+    }
+
+    for(unsigned int i = 0; i < _nbTurtle; i++)
+    {
+        players.push_back(Player{new QLabel(this),
+                            new Tortue()});
+    }
 
     for(unsigned int i = 0; i < players.size(); i++)
     {
@@ -30,7 +35,7 @@ CourseWindow::CourseWindow(QWidget *parent)
     m_timer = new QTimer(this);
 
     connect(m_timer, &QTimer::timeout, this, &CourseWindow::updateCourse);
-    m_timer->start(1000);
+    m_timer->start(500);
 }
 
 CourseWindow::~CourseWindow()

@@ -5,6 +5,7 @@
 #include <QPixmap>
 #include <QLabel>
 #include <QTimer>
+#include <QDebug>
 #include "Tortue.h"
 #include "Lievre.h"
 
@@ -19,15 +20,15 @@ class CourseWindow : public QDialog
     Q_OBJECT
 
 public:
-    CourseWindow(QWidget *parent = nullptr);
+    CourseWindow(int _nbHare, int _nbTurtle, QWidget *parent = nullptr);
     ~CourseWindow();
 
 private:
     vector<Player> players;
     QTimer* m_timer;
 
-    const uint MAX_CASES = 70;
-    const uint RESOLUTION = 64;
+    const int MAX_CASES = 70;
+    const int RESOLUTION = 64;
 
 private slots:
     void updateCourse();
